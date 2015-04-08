@@ -1,0 +1,69 @@
+\begin{thebibliography}{10}
+\providecommand{\biburl}[1]{\url{#1}}
+\providecommand{\urlprefix}{Available from: }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\biburl{#2}}
+
+\bibitem{1}
+Dantzig, G.~B.; Ramser, J.~H. The Truck Dispatching Problem. \emph{Management
+  Science}, volume~6, no.~1, 1959: pp. 80--91.
+
+\bibitem{8}
+Schröder, S. jsprit.
+\urlprefix\biburl{http://jsprit.github.io/}
+
+\bibitem{9}
+Open-VRP.
+\urlprefix\biburl{https://github.com/mck-/Open-VRP}
+
+\bibitem{10}
+Smet, G.~D. OptaPlanner.
+\urlprefix\biburl{http://www.optaplanner.org/}
+
+\bibitem{11}
+SYMPHONY.
+\urlprefix\biburl{https://projects.coin-or.org/SYMPHONY}
+
+\bibitem{12}
+Erdoğan, G. VRP Spreadsheet Solver. 2013.
+\urlprefix\biburl{http://verolog.deis.unibo.it/vrp-spreadsheet-solver}
+
+\bibitem{13}
+Groer, C. VRPH.
+\urlprefix\biburl{http://www.coin-or.org/projects/VRPH.xml}
+
+\bibitem{14}
+Pillac, V. Vroom.
+\urlprefix\biburl{http://victorpillac.com/vroom/}
+
+\bibitem{7}
+Fisher, M.~L.; Jaikumar, R. A generalized Assignment heuristic for Vehicle
+  Routing. 1979.
+
+\bibitem{3}
+Uchoa, E.; Pecin, D.; Pessoa, A.; et al. New Benchmark Instances for the
+  Capacitated Vehicle Routing Problem. 2014.
+
+\bibitem{2}
+Pecin, D.; Pessoa, A.; Poggi, M.; et al. Improved branch-cut-and-price for
+  capacitated vehicle routing. In \emph{Integer Programming and Combinatorial
+  Optimization}, Springer, 2014, pp. 393--403.
+
+\bibitem{4}
+Christofides, N.; Mingozzi, A.; Toth, P. The vehicle routing problem.
+  \emph{Combinatorial Optimization}, volume~1, 1979: pp. 315--338.
+
+\bibitem{6}
+Li, F.; Golden, B.; Wasil, E. ery large-scale vehicle routing: new test
+  problems, algorithms, and results. \emph{Computers \& Operations Research},
+  volume~32, no.~5, 2005: pp. 1165--1179.
+
+\bibitem{5}
+Clarke, G.; Wright, J. Scheduling of vehicles from a central depot to a number
+  of delivery points. \emph{Operations research}, volume~12, no.~4, 1964: pp.
+  568--581.
+
+\end{thebibliography}

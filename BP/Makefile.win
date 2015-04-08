@@ -1,0 +1,70 @@
+# Project: BP
+# Makefile created by Dev-C++ 5.10
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = ../algorithmSavings.o ../commonFunctions.o ../constraints.o ../load.o ../main.o ../algorithmHillClimb.o ../optMoves.o ../algorithmSimulatedAnnealing.o ../tests.o ../algorithmTabuSearch.o ../optCost.o ../plot.o ../optCostFA.o ../algorithmSCHC.o ../algorithmLAHC.o
+LINKOBJ  = ../algorithmSavings.o ../commonFunctions.o ../constraints.o ../load.o ../main.o ../algorithmHillClimb.o ../optMoves.o ../algorithmSimulatedAnnealing.o ../tests.o ../algorithmTabuSearch.o ../optCost.o ../plot.o ../optCostFA.o ../algorithmSCHC.o ../algorithmLAHC.o
+LIBS     = -L"C:/Users/Dongar/Dropbox/BP-Projekt/Dev-Cpp/MinGW64/lib" -L"C:/Users/Dongar/Dropbox/BP-Projekt/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -fopenmp
+INCS     = -I"C:/Users/Dongar/Dropbox/BP-Projekt/Dev-Cpp/MinGW64/include" -I"C:/Users/Dongar/Dropbox/BP-Projekt/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/Dongar/Dropbox/BP-Projekt/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Users/Dongar/Dropbox/BP-Projekt/Dev-Cpp/MinGW64/include" -I"C:/Users/Dongar/Dropbox/BP-Projekt/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/Dongar/Dropbox/BP-Projekt/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Users/Dongar/Dropbox/BP-Projekt/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
+BIN      = BP.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+../algorithmSavings.o: ../algorithmSavings.cpp
+	$(CPP) -c ../algorithmSavings.cpp -o ../algorithmSavings.o $(CXXFLAGS)
+
+../commonFunctions.o: ../commonFunctions.cpp
+	$(CPP) -c ../commonFunctions.cpp -o ../commonFunctions.o $(CXXFLAGS)
+
+../constraints.o: ../constraints.cpp
+	$(CPP) -c ../constraints.cpp -o ../constraints.o $(CXXFLAGS)
+
+../load.o: ../load.cpp
+	$(CPP) -c ../load.cpp -o ../load.o $(CXXFLAGS)
+
+../main.o: ../main.cpp
+	$(CPP) -c ../main.cpp -o ../main.o $(CXXFLAGS)
+
+../algorithmHillClimb.o: ../algorithmHillClimb.cpp
+	$(CPP) -c ../algorithmHillClimb.cpp -o ../algorithmHillClimb.o $(CXXFLAGS)
+
+../optMoves.o: ../optMoves.cpp
+	$(CPP) -c ../optMoves.cpp -o ../optMoves.o $(CXXFLAGS)
+
+../algorithmSimulatedAnnealing.o: ../algorithmSimulatedAnnealing.cpp
+	$(CPP) -c ../algorithmSimulatedAnnealing.cpp -o ../algorithmSimulatedAnnealing.o $(CXXFLAGS)
+
+../tests.o: ../tests.cpp
+	$(CPP) -c ../tests.cpp -o ../tests.o $(CXXFLAGS)
+
+../algorithmTabuSearch.o: ../algorithmTabuSearch.cpp
+	$(CPP) -c ../algorithmTabuSearch.cpp -o ../algorithmTabuSearch.o $(CXXFLAGS)
+
+../optCost.o: ../optCost.cpp
+	$(CPP) -c ../optCost.cpp -o ../optCost.o $(CXXFLAGS)
+
+../plot.o: ../plot.cpp
+	$(CPP) -c ../plot.cpp -o ../plot.o $(CXXFLAGS)
+
+../optCostFA.o: ../optCostFA.cpp
+	$(CPP) -c ../optCostFA.cpp -o ../optCostFA.o $(CXXFLAGS)
+
+../algorithmSCHC.o: ../algorithmSCHC.cpp
+	$(CPP) -c ../algorithmSCHC.cpp -o ../algorithmSCHC.o $(CXXFLAGS)
+
+../algorithmLAHC.o: ../algorithmLAHC.cpp
+	$(CPP) -c ../algorithmLAHC.cpp -o ../algorithmLAHC.o $(CXXFLAGS)

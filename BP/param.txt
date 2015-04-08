@@ -1,0 +1,4 @@
+PROBLEM_FILE = path.txt
+OUTPUT_TOUR_FILE = opath.txt
+TRACE_LEVEL = 0
+RUNS = 10

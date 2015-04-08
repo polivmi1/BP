@@ -1,0 +1,861 @@
+% options:
+% thesis=B bachelor's thesis
+% thesis=M master's thesis
+% czech thesis in Czech language
+% english thesis in English language
+% hidelinks remove colour boxes around hyperlinks
+
+\documentclass[thesis=B,english]{FITthesis}[2012/10/20]
+
+ \usepackage[utf8]{inputenc} % LaTeX source encoded as UTF-8
+% \usepackage[latin2]{inputenc} % LaTeX source encoded as ISO-8859-2
+% \usepackage[cp1250]{inputenc} % LaTeX source encoded as Windows-1250
+
+\usepackage{graphicx} %graphics files inclusion
+% \usepackage{subfig} %subfigures
+% \usepackage{amsmath} %advanced maths
+% \usepackage{amssymb} %additional math symbols
+
+\usepackage{dirtree} %directory tree visualisation
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{listings}
+\usepackage{tkz-graph}
+
+\usepackage{subcaption}
+% list of acronyms
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{clickable}
+\overfullrule=1mm
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% EDIT THIS
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+\department{Department of Theoretical Computer Science}
+\title{Vehicle routing problem, its variants and solving methods}
+\authorGN{Michal} %author's given name/names
+\authorFN{Polívka} %author's surname
+\author{Michal Polívka} %author's name without academic degrees
+\authorWithDegrees{Michal Polívka} %author's name with academic degrees
+\supervisor{RNDr. Tomáš Valla, Ph.D.}
+\acknowledgements{THANKS}
+\abstractEN{Summarize the contents and contribution of your work in a few sentences in English language.}
+\abstractCS{V n{\v e}kolika v{\v e}t{\' a}ch shr{\v n}te obsah a p{\v r}{\' i}nos t{\' e}to pr{\' a}ce v {\v c}esk{\' e}m jazyce.}
+\placeForDeclarationOfAuthenticity{Prague}
+\keywordsCS{Replace with comma-separated list of keywords in Czech.}
+\keywordsEN{Replace with comma-separated list of keywords in English.}
+\declarationOfAuthenticityOption{1} %select as appropriate, according to the desired license (integer 1-6)
+
+
+\begin{document}
+
+
+\setsecnumdepth{part}
+\chapter{Introduction}
+    The first chapter gives an introduction to Vehicle Routing Problem(VRP) and describes motivation, why should we study it. We also outline basic definition and notation of the problem. In the last section are mentioned and reviewed available open-source solvers, to which we later compare our results.
+
+    \section{Motivation and objectives}
+    Vehicle routing problem has been extensively studied since 1959\cite{1}, when was also defined under the name of Truck Dispatching Problem. The problem appears in many forms in real life and solution to the problem can save companies a lot of money. It's an important problem in the fields of transportation, distribution, and logistics.
+
+    The problem can be simply describe as: Having a fleet of vehicles, number of customers and depot, each vehicle starts from a depot, visits some customers and returns back to the depot. At the end all customers should be served and the objective function should be minimal. It's an combinatorial optimization and integer programming problem and the goal is to minimize an objective function, which can vary.
+    The problem belongs to the class of NP-Hard problems, therefore for large real world problems isn't applicable an exact solution.
+
+    For specific variant of the problem known as Capacitated Vehicle Routing Problem(CVRP), we have implemented some of the known algorithms, developed their variants and applied to them different strategies.
+    We implement two strategies, which are based on local search and haven't been well described in literature, and we apply them to CVRP obtaining very good results in a little time.
+
+    \section{Definition}
+    The definitions of the problem vary depending on the constraints, graph and objective function.
+    In literature and it's simplest variant CVRP, the problem is mostly defined on a complete undirected graf \(G = (V,E)\), where \(V\) is a set \((0,...,N)\) of vertices. Each vertex \(i\) excluding vertex \(0\) represents a customer and it's demand \(q_{i}\). \(N-1\) is the number of customers. Vertex \(0\), where starts and ends every route \(R_i\) is called depot. \(E\) is a set of edges \(e_{ij} (i,j \in V)\) and every edge \(e_{ij}\) has a cost \(c_{ij}\). A fleet of vehicles \(m\), where each vehicle has defined identical capacity \(Q\) waits at the depot. We have to determine a number of vehicles \(m\) and their routes \(R_i\) \((i \in (0,m))\) such that:
+    \begin{itemize}
+      \item The total demand of route doesn't exceed the vehicle capacity
+      \item Each customer is visited only once by exactly one vehicle
+    \end{itemize}
+    The solution consists of a set of \(m\) cycles sharing the depot vertex \(0\). In many variants of the problem the common objective is to minimize the number of vehicles \(m\) and the total cost of routes in set \(R\).
+
+    \section{VRP variants}
+    Over more than 50 years there has been described many variants of the classical problem. We will just mention few of them to show how wide and complex the problem is.
+    Between the most studied belong:
+    \begin{description}
+      \item[Capacitated Vehicle Routing Problem(CVRP)] \hfill \break
+      The problem has been defined in previous section and we can find it in real-life dispatching products problems.
+      \item[Vehicle Routing Problem with Time Windows(VRPTW)] \hfill \break
+      VRPTW is a variant, where the objective is to serve the demands of customers in predefined time windows. There has been variants with soft windows allowed(we can deliver in different time with some penalty).
+      \item[Vehicle Routing Problem with Pick-Up and Delivery(VRPPD)] \hfill \break
+      VRPPD is similar to CVRP, but we have two types of items. Ones to deliver to customer from depot and the other to deliver from customer to depot.
+    \end{description}
+    Other studied variants are for example:
+    \begin{itemize}[noitemsep]
+      \item dynamic - some customers aren't known in advance and are added in real-time
+      \item heterogenous - there exist different types of vehicles with different capacities
+      \item multiple depots - route can start in any of existing depots and end there, variants with vehicles corresponding to specified depot
+      \item periodic - we need to solve the problem for m days
+      \item split delivery - more than one vehicle can visit one customer
+      \item stochastic - one or more components are random(customer \(i\) presented with probability \(p_i\), random demands, random cost \(c_{ij}\),...). First solution is generated before knowing the values and second solution corrects that solution after knowing the random variables
+      \item with backhauls - similar to VRPPD, but with a restriction, that all demands on route \(r_{i}\) has to be completed before any pick-ups are made on that route
+      \item with satellite facilities - these can replenish a vehicle, so that the vehicle can continue until specified time
+    \end{itemize}
+    Because of the complex structure of the real-life problems, there exists numerous combinations of these and other variants.
+    \section{Free/Open-source solvers}
+    There has been few free/open-source solvers, which can solve different types of VRP with different number of customers. For CVRP we present at the end of this chapter results obtained from these algorithms and a comparison with our solution on benchmark instances. Now we present the summary of these solvers(we have excluded some, which implement only basic heuristics) and their brief description obtained from the cited source with some extra findings.
+    \begin{description}
+      \item[jsprit\cite{8}]Jsprit is a java based, open source toolkit for solving rich traveling salesman (TSP) and vehicle routing problems (VRP). It's core metaheuristic algorithm uses ruin-and-recreate principle(destroy part of the solution and recreate that differently).
+      \item[Open-VRP\cite{9}]Open VRP is a framework to model and solve VRP-like problems for students, academics, businesses and hobbyist alike. It includes implementation of greedy heuristics and tabu search.
+      \item[OptaPlanner\cite{10}]OptaPlanner is a constraint satisfaction solver written in Java. It supports many different problems and includes their examples.
+      \item[SYMPHONY\cite{11}]SYMPHONY is an open-source solver for mixed-integer linear programs (MILPs) written in C. It can be also executed in parallel.
+      \item[VRP Spreadsheet Solver\cite{12}]The Microsoft Excel workbook VRP Spreadsheet Solver is an open source unified platform for representing, solving, and visualising the results of VRP. It unifies Excel, public GIS and metaheuristics. It can solve VRP with up to 200 customers.
+      \item[VRPH\cite{13}]VRPH is an open source library of heuristics for the capacitated Vehicle Routing Problem (VRP). It includes several example applications that can be used to quickly generate good solutions to VRP instances containing thousands of customer locations. It has been developed as part of Chris Groer's dissertation while at the University of Maryland with advisor Bruce Golden.
+      \item[Vroom\cite{14}]Vroom contains different libraries and frameworks for solving VRP and dynamic VRP.
+    \end{description}
+
+\chapter{Capacitated Vehicle Routing Problem}
+
+    \section{Introduction}
+    CVRP is one of the oldest and most studied variants of the problem. Over the time there has been invented and applied many algorithms. We have concentrated on meta-heuristics, especially the ones, that use local search strategies. We first define a mathematical model of the problem as described in\cite{7}, then we we briefly overview the methods used to solve the problem. We introduce used benchmarks, implemented strategies and algorithms. At the end of this chapter we present a comparison of the implemented algorithms, comparison with best known results and with available open-source solvers.
+    \section{Definition}
+    In the first chapter we have already described the problem, but for completeness we provide an integer programming formulation that has been described in\cite{7}:
+
+    As previously defined:
+    N        ... number of vertices
+    N-1      ... number of customers
+    vertex 0 ... depot
+    \(c_{ij}\)   ... cost of traversing edge (i,j)
+    Q        ... capacity of each vehicle
+    R        ... set of routes in final solution
+    m        ... number of vehicles in final solution
+
+    min$$\sum_{i=0}^{N}\sum_{j=0}^{N} c_{ij} * x_{ij}$$
+
+    subject to:
+        $$\sum_{j=1}^{N} x_{0j} = 2m$$
+        $$\sum_{i\le k} x_{ik} + \sum_{j>k} x_{kj} = 2 (k \in (1,N))$$
+
+
+
+    \section{Solution methods}
+
+        \subsection{Exact algorithms}
+            Because of the NP-Hard nature of the problem, exact algorithms can't solve large instances. They can solve instances with up to 200 customers, but weren't able to solve some instances with even less(for example instance CMT6 with 50 customers hasn't been solved to optimum yet).
+            They are very complex and solved with specialized solvers using mixed-integer linear model formulation. We haven't studied these methods, but mention them here for completness.
+            The two common strategies are:
+            \begin{itemize}
+              \item Branch and bound - state-space search. Let set of solutions form a tree. The algorithm explores this tree and in every branch checks the lower and upper estimated bounds. If it's not satisfied, the solution is discarded.
+              \item Branch and cut - generalization of branch and bound where, after solving the LP relaxation, and having not been successful in pruning the node on the basis of the LP solution, we try to find a violated cut. If one or more violated cuts are found, they are added to the formulation and the LP is solved again. If none are found, we branch.
+            \end{itemize}
+            To our acquired knowledge from \cite{3}, there has been recently published a Branch-Cut-and-Price algorithm(BCP)\cite{2}, which is very complex and can solve most instances up to 275 customers. The number of customers, that can solve also depends on Q and the length of the routes. The computational time can vary from minutes to hours.
+
+        \subsection{Heuristics}
+
+        \subsection{Meta-heuristics}
+
+    \section{Benchmarks}
+    There has been many benchmark instances for the problem, most of them having up to 200 customers.
+    For the purpose of testing we have chosen 3 different benchmark sets.
+    The summary and other benchmark sets can be found in\cite{3}.
+    \begin{description}
+      \item[Christofides, Mingozzi and Toth (1979)\cite{4}] \hfill \break
+      This set contains 14 instances with a range of customers between 50 and 199. They have random structure and in instances 11 to 14 the customers are clustered in groups. Some of the instances also have a constraint on maximum length of a route. All the instances in this set has been solved to optimum by very sophisticated solvers and most of modern meta-heuristic approaches can solve most of them to optimal value. We have chosen this set, because it has quite small number of customers and some of open-source solvers have been tested on it too. With a little playing with the arguments of our algorithms we were able to solve all instances to optimum.
+      \item[Li et al. (2005)\cite{6}] \hfill \break
+      This set contains 12 instances with a range of customers between 560 and 1200. It includes 3 largest instances ever published in research papers: 1040, 1120 and 1200 customers. This set has been very popular, because of its size. However the set is extremely artificial and all the customers are located in concentric circles around the depot. The routes in best known solutions have almost identical shapes, or the solution is somehow symmetrical. The optimum hasn't been proved in any of them yet. From all 3 benchmark sets our algorithms had most problems with this one and has on average differ less than 6\% from the best known value. We think that the big gap from the best known solution is mainly because of the artificial structure and positioning of the customers. Our algorithms are based on local improvements, which are difficult to make if all neighbours of a customer have similar distances to that customer.
+      \item[Uchoa et al. (2014)\cite{3}] \hfill \break
+      This is a recently published set, which consists of 100 instances with a range of customers between 100 and 1000. All the customers are generated in random clusters. This new set was designed in order to provide a more comprehensive and balanced experimental setting and is intended to be primarily used in the next years. If we compare our algorithm to the state-of-the-art algorithms compared in \cite{3}, it appears, that in some instances we can compete with them and with bigger problem size our running time is much less. More closely we will look on this in the comparison section.
+    \end{description}
+
+    \section{Implemented strategies, neighbourhoods}
+        \subsection{Local search}
+            Local search is a strategy, which locally improves objective function.
+            
+            Local optima,.........
+        \subsection{Neighbourhood}
+            Neighbourhoods are used in local search methods
+            \subsubsection{Swap}
+            Swap procedure takes two different nodes \(i,j\) from \(N-\{0\}\) and swaps these nodes.
+            
+\begin{figure}[htbp]
+    \centering 
+    \SetUpEdge[lw         = 1.5pt]
+    \begin{tikzpicture}
+           \renewcommand{\VertexLightFillColor}{green}
+       \Vertex[L=Depot,x=0 ,y=0]{Depot1}
+           \renewcommand{\VertexLightFillColor}{white}
+       \Vertex[L=$1$,x=0 ,y=3]{11}
+       \Vertex[L=$2$,x=0 ,y=5]{21}
+       \Vertex[L=$3$,x=2 ,y=4]{31}
+           \renewcommand{\VertexLightFillColor}{yellow}
+       \Vertex[L=$4$,x=2 ,y=1]{41}
+       \Vertex[L=$5$,x=1 ,y=2]{51}
+           \renewcommand{\VertexLightFillColor}{white}
+       \Vertex[L=$6$,x=3 ,y=2]{61}
+       \Vertex[L=$7$,x=3 ,y=0]{71}
+       \Edge[color=red](Depot1)(11)
+       \Edge[color=red](11)(21)
+       \Edge[color=red](21)(31)
+       \Edge[color=red](31)(41)
+       \Edge[color=red](41)(Depot1)
+       \Edge[color=blue](Depot1)(51)
+       \Edge[color=blue](51)(61)
+       \Edge[color=blue](61)(71)
+       \Edge[color=blue](71)(Depot1)
+
+           \renewcommand{\VertexLightFillColor}{green}
+       \Vertex[L=Depot,x=5 ,y=0]{Depot2}
+           \renewcommand{\VertexLightFillColor}{white}
+       \Vertex[L=$1$,x=5 ,y=3]{12}
+       \Vertex[L=$2$,x=5 ,y=5]{22}
+       \Vertex[L=$3$,x=7 ,y=4]{32}
+           \renewcommand{\VertexLightFillColor}{yellow}
+       \Vertex[L=$4$,x=7 ,y=1]{42}
+       \Vertex[L=$5$,x=6 ,y=2]{52}
+           \renewcommand{\VertexLightFillColor}{white}
+       \Vertex[L=$6$,x=8 ,y=2]{62}
+       \Vertex[L=$7$,x=8 ,y=0]{72}      
+       \Edge[color=red](Depot2)(12)
+       \Edge[color=red](12)(22)
+       \Edge[color=red](22)(32)
+       \Edge[color=red](32)(52)
+       \Edge[color=red](52)(Depot2)
+       \Edge[color=blue](Depot2)(42)
+       \Edge[color=blue](42)(62)
+       \Edge[color=blue](62)(72)
+       \Edge[color=blue](72)(Depot2)
+    \end{tikzpicture}
+        \caption{Before and after the procedure Swap(4,5)}
+        \label{fig:myfirstfig}
+\end{figure}
+            \subsubsection{Reverse edge}
+            Reverse edge procedure takes two different nodes \(i,j\) from \(N-\{0\}\), which have a common route and reverses the sub-route from \(i\) to \(j\) including both \(i\) and \(j\).
+
+
+\begin{figure}[htbp]
+    \centering
+    \SetUpEdge[lw         = 1.5pt]
+    \begin{tikzpicture}
+           \renewcommand{\VertexLightFillColor}{green}
+       \Vertex[L=Depot,x=0 ,y=0]{Depot1}
+           \renewcommand{\VertexLightFillColor}{white}
+       \Vertex[L=$1$,x=0 ,y=3]{11}
+       \Vertex[L=$2$,x=0 ,y=5]{21}
+       \Vertex[L=$3$,x=2 ,y=4]{31}
+           \renewcommand{\VertexLightFillColor}{yellow}
+       \Vertex[L=$4$,x=4 ,y=1]{41}
+       \Vertex[L=$5$,x=2 ,y=1]{51}
+       \Vertex[L=$6$,x=1 ,y=2]{61}
+           \renewcommand{\VertexLightFillColor}{white}
+       \Vertex[L=$7$,x=5 ,y=2]{71}
+       \Vertex[L=$8$,x=5 ,y=0]{81}
+       \Edge[color=red](Depot1)(11)
+       \Edge[color=red](11)(21)
+       \Edge[color=red](21)(31)
+       \Edge[color=red](31)(41)
+       \Edge[color=blue](41)(51)
+       \Edge[color=blue](51)(61)
+       \Edge[color=red](61)(71)
+       \Edge[color=red](71)(81)
+       \Edge[color=red](81)(Depot1)
+
+           \renewcommand{\VertexLightFillColor}{green}
+       \Vertex[L=Depot,x=7 ,y=0]{Depot2}
+           \renewcommand{\VertexLightFillColor}{white}
+       \Vertex[L=$1$,x=7 ,y=3]{12}
+       \Vertex[L=$2$,x=7 ,y=5]{22}
+       \Vertex[L=$3$,x=9 ,y=4]{32}
+           \renewcommand{\VertexLightFillColor}{yellow}
+       \Vertex[L=$4$,x=11 ,y=1]{42}
+       \Vertex[L=$5$,x=9 ,y=1]{52}
+       \Vertex[L=$6$,x=8 ,y=2]{62}
+           \renewcommand{\VertexLightFillColor}{white}
+       \Vertex[L=$7$,x=12 ,y=2]{72}
+       \Vertex[L=$8$,x=12 ,y=0]{82}
+       \Edge[color=red](Depot2)(12)
+       \Edge[color=red](12)(22)
+       \Edge[color=red](22)(32)
+       \Edge[color=red](32)(62)
+       \Edge[color=blue](62)(52)
+       \Edge[color=blue](52)(42)
+       \Edge[color=red](42)(72)
+       \Edge[color=red](72)(82)
+       \Edge[color=red](82)(Depot2)
+    \end{tikzpicture}
+        \caption{Before and after the procedure ReverseEdge(4,5)}
+        \label{fig:mysecondfig}
+\end{figure}
+
+
+            \subsubsection{Delete and insert}
+            Delete and insert procedure takes a node \(i\) from \(N-\{0\}\), deletes it and inserts it in the best possible place among the routes.
+           
+\begin{figure}[htbp]
+    \centering
+    \SetUpEdge[lw         = 1.5pt]
+    \begin{tikzpicture}
+           \renewcommand{\VertexLightFillColor}{green}
+       \Vertex[L=Depot,x=0 ,y=0]{Depot1}
+           \renewcommand{\VertexLightFillColor}{white}
+       \Vertex[L=$1$,x=0 ,y=3]{11}
+       \Vertex[L=$2$,x=0 ,y=5]{21}
+       \Vertex[L=$3$,x=2 ,y=4]{31}
+           \renewcommand{\VertexLightFillColor}{yellow}
+       \Vertex[L=$5$,x=2 ,y=1]{51}
+           \renewcommand{\VertexLightFillColor}{white}
+       \Vertex[L=$4$,x=1 ,y=2]{41}
+       \Vertex[L=$6$,x=3 ,y=3]{61}
+       \Vertex[L=$7$,x=3 ,y=0]{71}
+       \Edge[color=red](Depot1)(11)
+       \Edge[color=red](11)(21)
+       \Edge[color=red](21)(31)
+       \Edge[color=red](31)(41)
+       \Edge[color=red](41)(51)
+       \Edge[color=red](51)(Depot1)
+       \Edge[color=blue](Depot1)(61)
+       \Edge[color=blue](61)(71)
+       \Edge[color=blue](71)(Depot1)
+
+           \renewcommand{\VertexLightFillColor}{green}
+       \Vertex[L=Depot,x=5 ,y=0]{Depot2}
+           \renewcommand{\VertexLightFillColor}{white}
+       \Vertex[L=$1$,x=5 ,y=3]{12}
+       \Vertex[L=$2$,x=5 ,y=5]{22}
+       \Vertex[L=$3$,x=7 ,y=4]{32}
+           \renewcommand{\VertexLightFillColor}{yellow}
+       \Vertex[L=$5$,x=7 ,y=1]{52}
+           \renewcommand{\VertexLightFillColor}{white}
+       \Vertex[L=$4$,x=6 ,y=2]{42}
+       \Vertex[L=$6$,x=8 ,y=3]{62}
+       \Vertex[L=$7$,x=8 ,y=0]{72}
+       \Edge[color=red](Depot2)(12)
+       \Edge[color=red](12)(22)
+       \Edge[color=red](22)(32)
+       \Edge[color=red](32)(42)
+       \Edge[color=red](42)(Depot2)
+       \Edge[color=blue](Depot2)(52)
+       \Edge[color=blue](52)(62)
+       \Edge[color=blue](62)(72)
+       \Edge[color=blue](72)(Depot2)
+    \end{tikzpicture}
+        \caption{Before and after the procedure DeleteAndInsert(5)}
+        \label{fig:mythirdfig}
+\end{figure}
+
+
+            \subsubsection{Double delete and double insert}
+            Double delete and double insert procedure takes two different nodes \(i,j\) from \(N-\{0\}\), which are then deleted and reinserted at the best place in the opposite routes.
+            Picture:
+        \subsection{First fit}
+            Strategy used in local search algorithms, which picks the first neighbouring solution, that satisfies the constraints. The advantage is, that it usually finds a solution quickly. However, if there are not many feasible solutions it can end up searching through all of them. The disadvantage is, that it picks always the same neighbour.
+        \subsection{Best fit}
+            Strategy used in local search algorithms, which tries all the possible neighbouring solutions and picks the best one. The advantage is, that it always picks the best neighbourhood. The disadvantage is, that it always picks the same neighbourhood and has to search all neighbourhoods, which in G costs at least \(O(N^2)\) operations.
+        \subsection{Random fit}
+            Strategy used in local search algorithms, which randomly chooses the neighbourhood solution, that satisfies the constraints. The advantage is, that it adds randomization to the algorithm and so we have a bigger chance not to end up in the same local minimum. However, if we have little feasible neighbourhoods left, it can take more time to find the feasible one.
+        \subsection{Closest search}
+            Strategy used in local search algorithms, which searches neighbouring solution only among closest neighbours.
+\newpage
+    \section{Implemented algorithms}
+\newpage
+        \subsection{Savings algorithm\cite{5}}
+\begin{algorithm}
+\caption{Savings algorithm}\label{savings}
+\begin{algorithmic}[1]
+\Procedure{algorithmSavings}{}
+\State Initialize each customer in his own route
+\For{$i = 1; i \leq K; i \gets i + 1$}
+    \For{$j = i + 1; j \leq K; j \gets j + 1$}
+        \State $s[it].cost \gets d[i][0] + d[0][j] - d[i][j]$
+        \State $s[it].i \gets i$
+        \State $s[it].j \gets j$
+        \State $it \gets it + 1$
+    \EndFor
+\EndFor
+\State Sort $s$ in descending order
+\For{all $x$ in $s$}
+    \State $a \gets x.i$
+    \State $b \gets x.j$
+    \If {ConstraintsViolated($a$,$b$)}
+        \State continue
+    \EndIf
+    \If {$a.next = depot$ AND $b.next = depot$}
+        \State reverseRoute($b$)
+    \EndIf
+    \If {$a.next = depot$ AND $b.prev = depot$}
+        \State connectRoutes($a$,$b$)
+    \EndIf
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+\newpage
+        \subsection{Hill-Climbing algorithm}
+\begin{algorithm}
+\caption{Hill-Climbing algorithm}\label{hill-climb}
+\begin{algorithmic}[1]
+\Procedure{algorithmHillClimb}{}
+\State $S \gets$ feasible solution
+\State $C(S) \gets$ cost($S$)
+\While{1}
+    \State $S* \gets$ BestFeasibleNeighbourOf($S$)
+    \State $C(S*) \gets$ cost($S*$)
+    \If {C(S*) \l $C(S)$}
+        \State $S \gets S*$
+        \State $C(S) \gets C(S*)$
+    \Else
+        \State break
+    \EndIf
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+\newpage
+        \subsection{Late Acceptance Hill-Climbing algorithm}
+\begin{algorithm}
+\caption{Late Acceptance Hill-Climbing algorithm}\label{LAHC}
+\begin{algorithmic}[1]
+\Procedure{algorithmLAHC}{}
+\State $S \gets$ feasible solution
+\State $C(S) \gets$ cost($S$)
+\State $lastCosts[] \gets C(S)$
+\State $n \gets$ 0
+\While{Stopping criteria not met}
+    \State $S* \gets$ FeasibleNeighbourOf($S$)
+    \State $C(S*) \gets$ cost($S*$)
+    \If {$C(S*) \leq C(S)$ OR $C(S*) \leq lastCosts[n mod pL]$}
+        \State $S \gets S*$
+        \State $C(S) \gets C(S*)$
+    \EndIf
+    \State $lastCosts[n mod pL] \gets C(S)$
+    \State $n \gets n + 1$
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+\newpage
+        \subsection{Step Counting Hill-Climbing algorithm}
+\begin{algorithm}
+\caption{Step Counting Hill-Climbing algorithm}\label{SCHC}
+\begin{algorithmic}[1]
+\Procedure{algorithmSCHC}{}
+\State $S \gets$ feasible solution
+\State $C(S) \gets$ cost($S$)
+\State $B \gets C(S)$
+\State $n \gets$ 0
+\While{Stopping criteria not met}
+    \State $S* \gets$ FeasibleNeighbourOf($S$)
+    \State $C(S*) \gets$ cost($S*$)
+    \If {$C(S*) \leq C(S)$ OR $C(S*) \leq B$}
+        \State $S \gets S*$
+        \State $C(S) \gets C(S*)$
+    \EndIf
+    \If {$pL \leq n$}
+        \State $B \gets C(S)$
+        \State $n \gets 0$
+    \EndIf
+    \State $n \gets n + 1$
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+\newpage
+        \subsection{Simulated Annealing}
+\begin{algorithm}
+\caption{Simulated Annealing algorithm}\label{SA}
+\begin{algorithmic}[1]
+\Procedure{algorithmSimulatedAnnealing}{}
+\State $S \gets$ feasible solution
+\State $C(S) \gets$ cost($S$)
+\While{$eT \leq T$}
+    \State $S* \gets$ FeasibleNeighbourOf($S$)
+    \State $C(S*) \gets$ cost($S*$)
+    \If {$C(S*) \leq C(S)$ OR random(0,1) $ \leq $ exp($(C(S) - C(S*)) / T$)}
+        \State $S \gets S*$
+        \State $C(S) \gets C(S*)$
+    \EndIf
+    \State $T \gets T * fT$
+\EndWhile
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+\newpage
+        \subsection{Tabu Search}
+
+\newpage
+    \section{Comparison of implemented algorithms}
+        We have compared the implemented algorithms on different benchmark instances. Because it is difficult to compare these algorithms and most of them has parameters, which work best when found experimentally on a specific instance of the problem, we run the algorithms with the same algorithms, so we can also compare how the algorithms behave in general.
+        We have allowed a maximum time of 5 minutes for one instance. However some of the algorithms running time is few seconds. With bigger size of the problem the running time is also bigger.
+        In instances with many customers(> 500), the results aren't as close to the best known as in smaller instances, because the algorithms would need more time to search the neighbourhoods.
+    \section{Comparison with best-known results}
+
+
+
+\begin{tikzpicture}
+	\begin{axis}[width=\textwidth,xlabel=Customers, ylabel=Gap,title={\centering Christofides, Mingozzi and Toth\\}, title style={text width=6cm}]
+	\addplot table[x=customers,y=gap] {
+customers   gap
+50	         0
+50	         0.000190618
+75	         0.177534957
+75	         0.32289347
+100	        -0.000577121
+100	         0.079188833
+100	         0.631369986
+100	         0.707323833
+120	         0.117070175
+120	         0.158973228
+150	         0.386219948
+150	         1.416736353
+199	         0.687036573
+199	         1.684362149
+
+	};
+		
+	\end{axis}
+\end{tikzpicture}
+\\
+\begin{tikzpicture}
+	\begin{axis}[width=\textwidth,xlabel=Customers, ylabel=Gap,title={\centering Li et al\\}, title style={text width=6cm}]
+	\addplot table[x=customers,y=gap] {
+customers   gap
+560	        3.348609423
+600	        3.743868687
+640	        5.666689715
+720	        4.589678017
+760	        2.684265954
+800	        6.922746405
+840	        3.102574805
+880	        7.617283811
+960	        4.048459404
+1040	   8.987634874
+1120	   8.122443986
+1200	   11.13079373
+
+
+	};
+		
+	\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{axis}[width=\textwidth,xlabel=Customers, ylabel=Gap,title={\centering Uchoa et al\\}, title style={text width=6cm}]
+	\addplot table[x=customers,y=gap] {
+customers   gap
+100				0.736109601
+105				0.371747212
+109				0.361365306
+114				1.35325959
+119				0.879087909
+124				1.146581681
+128				1.238424326
+133				1.002198608
+138				0.558498896
+142				1.407643312
+147				0.742036457
+152				4.259660697
+156				0.452713913
+161				0.31051068
+166				1.699664348
+171				0.512859868
+175				2.245252238
+180				0.36763268
+185				1.139366328
+189				1.08598351
+194				0.603052572
+199				1.79384752
+203				0.970099668
+208				0.760373173
+213				3.752763449
+218				0.108848165
+222				0.966688924
+227				3.944137985
+232				1.38949558
+236				1.028030471
+241				0.832618337
+246				2.130976015
+250				1.185244546
+255				0.664194915
+260				1.790420965
+265				0.843159596
+269				0.779518857
+274				0.763473759
+279				1.519863893
+283				2.603579551
+288				0.80356486
+293				1.13893188
+297				1.237474804
+302				1.382910228
+307				2.415019916
+312				0.783994726
+316				0.905238976
+321				1.254603897
+326				1.140586442
+330				1.116934058
+335				0.722716725
+343				1.053944274
+350				1.233330764
+358				1.500320332
+366				3.058648198
+375				0.115765031
+383				0.610008928
+392				0.974940552
+400				0.548284347
+410				3.198093113
+419				0.516707175
+428				0.686401734
+438				0.587718093
+448				2.275494535
+458				2.240188578
+468				0.289758414
+479				0.550622662
+490				1.13277205
+501				0.324895672
+512				2.059005826
+523				1.156577875
+535				0.605433023
+547				0.365009803
+560				1.199129947
+572				1.108310358
+585				0.416292633
+598				0.451552384
+612				1.696596402
+626				1.524548632
+640				1.91011764
+654				0.284697509
+669				1.943355714
+684				0.882847329
+700				1.280180903
+715				2.231311901
+732				0.638722262
+748				0.971814672
+765				1.445724301
+782				1.405762222
+800				0.724946985
+818				0.310927232
+836				0.386740616
+855				0.336851561
+875				0.836904057
+894				1.645429158
+915				0.248368471
+935				3.594245599
+956				0.526831888
+978				1.380103025
+1000			1.62849523
+
+
+
+	};
+		
+	\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+	\begin{axis}[width=\textwidth,xlabel=Algorithm, ylabel=Average gap,title={\centering Christofides, Mingozzi and Toth\\}, title style={text width=6cm}, symbolic x coords={0,LA0,LA50,LA75,LA99,SC0,SC50,SC75,SC99,SA0,SA50,SA75,SA99}]
+	\addplot table[x=algorithm,y=gap] {
+algorithm   gap
+LA0					0.536080741			
+LA50	            0.390107864			
+LA75	            0.382653926			
+LA99	            0.304787705			
+SC0	                0.646232995			
+SC50	            0.39850728				
+SC75	            0.36151336				
+SC99	            0.299529912			
+SA0	                0.231329592			
+SA50	            0.250955261		
+SA75	            0.142902275			
+SA99                0.212678972
+
+	};
+	\addplot table[x=algorithm,y=gap] {
+algorithm   gap
+LA0					0.828714053				
+LA50	            0.699082955				
+LA75	            0.618844247				
+LA99	            0.57218228				
+SC0	                1.296173677				
+SC50	            0.785875852				
+SC75	            0.737155668				
+SC99	            0.634321587				
+SA0	                0.676617952				
+SA50	            0.596463514			
+SA75	            0.475447804				
+SA99                0.454880214
+
+	};
+	\addplot table[x=algorithm,y=gap] {
+algorithm   gap
+LA0					1.175549918				
+LA50	            1.10490423				
+LA75	            0.857360183				
+LA99	            0.947491293				
+SC0	                2.232730149				
+SC50	            1.342646411				
+SC75	            1.381068311				
+SC99	            1.243797794				
+SA0	                1.206991361				
+SA50	            0.993583327			
+SA75	            0.899871139				
+SA99                0.754804694
+
+	};
+ \legend{Best, Average, Worst}		
+	\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{axis}[width=\textwidth,xlabel=Algorithm, ylabel=Average gap,title={\centering Li et al\\}, title style={text width=6cm}, symbolic x coords={0,LA0,LA50,LA75,LA99,SC0,SC50,SC75,SC99,SA0,SA50,SA75,SA99}]
+	\addplot table[x=algorithm,y=gap] {
+algorithm   gap
+LA0					8.86558603		
+LA50	            7.736465401	
+LA75	            7.101590374	
+LA99	            6.411602422	
+SC0	                12.0167451		
+SC50	            6.022922153	
+SC75	            5.667928647	
+SC99	            3.947920592	
+SA0	                9.789083687	
+SA50	            8.780649612	
+SA75	            8.861571569	
+SA99                8.574818281
+
+	};
+	\addplot table[x=algorithm,y=gap] {
+algorithm   gap
+LA0					9.381285961		
+LA50	            8.127706442		
+LA75	            7.793779946		
+LA99	            7.564953146		
+SC0	                12.22743044		
+SC50	            8.322615526		
+SC75	            7.366517752		
+SC99	            5.830420735		
+SA0	                10.08918089		
+SA50	            9.229331469		
+SA75	            9.283303379		
+SA99                8.947136781
+
+	};
+	\addplot table[x=algorithm,y=gap] {
+algorithm   gap
+LA0					9.807474418			
+LA50	            8.557963963			
+LA75	            8.325117783			
+LA99	            8.367560863			
+SC0	                12.37569944			
+SC50	            10.63694491			
+SC75	            8.905001742			
+SC99	            8.006512869			
+SA0	                10.35258934			
+SA50	            9.62696942			
+SA75	            9.733860238			
+SA99                9.328839687
+
+	};
+ \legend{Best, Average, Worst}		
+	\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\begin{axis}[width=\textwidth,xlabel=Algorithm, ylabel=Average gap,title={\centering Uchoa et al\\}, title style={text width=6cm}, symbolic x coords={0,LA0,LA50,LA75,LA99,SC0,SC50,SC75,SC99,SA0,SA50,SA75,SA99}]
+	\addplot table[x=algorithm,y=gap] {
+algorithm   gap
+LA0					1.950579267	
+LA50	            1.423960187	
+LA75	            1.311311039	
+LA99	            1.258780312	
+SC0	                3.551043882	
+SC50	            0.989463439	
+SC75	            0.840800543	
+SC99	            0.852253388	
+SA0	                2.605074616	
+SA50	            2.290566594	
+SA75	            2.245174622	
+SA99                2.197877533
+
+	};
+	\addplot table[x=algorithm,y=gap] {
+algorithm   gap
+LA0					2.335660684	
+LA50	            1.792225476	
+LA75	            1.657890561	
+LA99	            1.621555633	
+SC0	                4.501627473	
+SC50	            1.436802679	
+SC75	            1.193785571	
+SC99	            1.192976912	
+SA0	                3.020832685	
+SA50	            2.704136249	
+SA75	            2.667659388	
+SA99                2.608495765
+
+	};
+	\addplot table[x=algorithm,y=gap] {
+algorithm   gap
+LA0					2.713088459	
+LA50	            2.157042821	
+LA75	            1.999840545	
+LA99	            1.996595101	
+SC0	                5.617737961	
+SC50	            2.038326333	
+SC75	            1.643242921	
+SC99	            1.576052532	
+SA0	                3.429123687	
+SA50	            3.118964715	
+SA75	            3.100668475	
+SA99                3.004403603
+
+	};
+ \legend{Best, Average, Worst}		
+	\end{axis}
+\end{tikzpicture}
+   
+    \section{Comparison with open-source solvers}
+
+    \section{Conclusion}
+
+\setsecnumdepth{part}
+\chapter{Conclusion}
+
+
+\bibliographystyle{iso690}
+\bibliography{vrpbib}
+
+\setsecnumdepth{all}
+\appendix
+
+\chapter{Acronyms}
+%\printglossaries
+%\begin{description}
+%	\item[GUI] Graphical user interface
+%\end{description}
+\begin{description}
+    \item[VRP] Vehicle routing problem
+    \item[CVRP] Capacitated vehicle routing problem
+    \item[VRPTW] Vehicle routing problem with time windows
+    \item[CCVRP] Cummulative capacitated vehicle routing problem
+    \item[LAHC] Late Acceptance Hill-Climbing algorithm
+    \item[SCHC] Step Counting Hill-Climbing algorithm
+    \item[SA] Simulated Annealing
+    \item[TS] Tabu Search
+\end{description}
+
+\chapter{Contents of enclosed CD}
+
+%change appropriately
+
+\begin{figure}
+	\dirtree{%
+		.1 readme.txt\DTcomment{the file with CD contents description}.
+		.1 exe\DTcomment{the directory with executables}.
+		.1 src\DTcomment{the directory of source codes}.
+		.2 wbdcm\DTcomment{implementation sources}.
+		.2 thesis\DTcomment{the directory of \LaTeX{} source codes of the thesis}.
+		.1 text\DTcomment{the thesis text directory}.
+		.2 thesis.pdf\DTcomment{the thesis text in PDF format}.
+		.2 thesis.ps\DTcomment{the thesis text in PS format}.
+	}
+\end{figure}
+
+\end{document}

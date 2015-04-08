@@ -1,0 +1,63 @@
+@ARTICLE{1,
+	AUTHOR       = {G. B. Dantzig and J. H. Ramser},
+	TITLE        = {The Truck Dispatching Problem},
+    JOURNAL      = {Management Science},
+	VOLUME       = {6},
+	NUMBER       = {1},
+	YEAR         = {1959},
+	PAGES        = {80--91}
+}
+
+@inproceedings{2,
+	AUTHOR       = {D. Pecin and A. Pessoa and M. Poggi and E. Uchoa},
+	TITLE        = {Improved branch-cut-and-price for capacitated vehicle routing},
+    booktitle    = {Integer Programming and Combinatorial Optimization},
+    publisher    = {Springer},
+	YEAR         = {2014},
+	PAGES        = {393--403}
+}
+
+@ARTICLE{3,
+	AUTHOR       = {Eduardo Uchoa and Diego Pecin and Artur Pessoa and Marcus Poggi and Anand Subramanian and Thibaut Vidal},
+	TITLE        = {New Benchmark Instances for the Capacitated Vehicle Routing Problem},
+	YEAR         = {2014}
+}
+@ARTICLE{4,
+	AUTHOR       = {N. Christofides and A. Mingozzi and P. Toth},
+	TITLE        = {The vehicle routing problem},
+    JOURNAL      = {Combinatorial Optimization},
+	VOLUME       = {1},
+	YEAR         = {1979},
+	PAGES        = {315--338}
+}
+@ARTICLE{5,
+	AUTHOR       = {G. Clarke and J. Wright},
+	TITLE        = {Scheduling of vehicles from a central depot to a number of delivery points},
+    JOURNAL      = {Operations research},
+	VOLUME       = {12},
+	NUMBER       = {4},
+	YEAR         = {1964},
+	PAGES        = {568--581}
+}
+
+@ARTICLE{6,
+	AUTHOR       = {F. Li and B. Golden and E. Wasil},
+	TITLE        = {ery large-scale vehicle routing: new test problems, algorithms, and results},
+    JOURNAL      = {Computers \& Operations Research},
+	VOLUME       = {32},
+	NUMBER       = {5},
+	YEAR         = {2005},
+	PAGES        = {1165--1179}
+}
+@ARTICLE{7,
+	AUTHOR       = {Marshall L. Fisher and Ramchandran Jaikumar},
+	TITLE        = {A generalized Assignment heuristic for Vehicle Routing},
+	YEAR         = {1979}
+}
+
+@online{8,
+  author = {Stefan Schröder},
+  title = {jsprit},
+  url = {http://jsprit.github.io/},
+  urldate = {2015-04-05}
+}

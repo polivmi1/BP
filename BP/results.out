@@ -1,0 +1,367 @@
+Loading file: ../Benchmarks/ChristofidesEilon/vrpnc1.txt
+Run n. 1/5
+Best Solution for problem: ../Benchmarks/ChristofidesEilon/vrpnc1.txt
+Route#1: 1 22 20 35 36 3 28 31 26 7 43 24
+Route#2: 27 8 48 23 6
+Route#3: 17 37 44 42 19 40 41 13 25 14
+Route#4: 46 12 5 38 16 2 11 32
+Route#5: 18 4 47
+Route#6: 49 10 9 50 29 21 34 30 39 33 45 15
+cost 584.637
+Best Solution for problem: ../Benchmarks/ChristofidesEilon/vrpnc1.txt
+Route#1: 1 22 20 35 36 3 28 31 26 7 43 24
+Route#2: 27 8 48 23 6
+Route#3: 17 37 44 42 19 40 41 13 25 14
+Route#4: 46 12 5 38 16 2 11 32
+Route#5: 18 4 47
+Route#6: 49 10 9 50 29 21 34 30 39 33 45 15
+cost 584.637
+BestScore = 583.787
+BestScore = 583.673
+BestScore = 583.462
+BestScore = 578.131
+BestScore = 577.453
+BestScore = 576.476
+BestScore = 572.269
+BestScore = 571.352
+BestScore = 570.637
+BestScore = 569.698
+BestScore = 567.466
+BestScore = 566.854
+BestScore = 565.377
+BestScore = 564.35
+BestScore = 564.268
+BestScore = 562.68
+BestScore = 562.426
+BestScore = 561.363
+BestScore = 560.376
+BestScore = 555.069
+BestScore = 553.432
+BestScore = 549.189
+BestScore = 548.487
+BestScore = 540.616
+BestScore = 539.342
+BestScore = 536.753
+BestScore = 535.771
+BestScore = 534.391
+BestScore = 531.612
+BestScore = 530.84
+BestScore = 530.408
+BestScore = 528.329
+BestScore = 528.147
+BestScore = 527.634
+BestScore = 526.926
+BestScore = 526.649
+BestScore = 525.738
+BestScore = 525.423
+BestScore = 524.629
+BestScore = 524.611
+Best Solution for problem: ../Benchmarks/ChristofidesEilon/vrpnc1.txt
+Route#1: 8 26 31 28 3 36 35 20 22 1 32
+Route#2: 6 14 25 24 43 7 23 48 27
+Route#3: 18 13 41 40 19 42 17 4 47
+Route#4: 38 9 30 34 50 16 21 29 2 11
+Route#5: 12 37 44 15 45 33 39 10 49 5 46
+cost 524.611
+BestScore = 583.787
+BestScore = 582.561
+BestScore = 581.628
+BestScore = 580.064
+BestScore = 577.663
+BestScore = 576.557
+BestScore = 571.677
+BestScore = 571.163
+BestScore = 570.652
+BestScore = 566.901
+BestScore = 565.899
+BestScore = 565.683
+BestScore = 564.848
+BestScore = 563.292
+BestScore = 562.615
+BestScore = 559.77
+BestScore = 559.268
+BestScore = 556.951
+BestScore = 554.853
+BestScore = 550.827
+BestScore = 550.514
+BestScore = 547.799
+BestScore = 547.283
+BestScore = 547.08
+BestScore = 544.284
+BestScore = 542.092
+BestScore = 540.09
+BestScore = 537.787
+BestScore = 536.59
+BestScore = 534.76
+BestScore = 531.945
+BestScore = 531.025
+BestScore = 530.4
+BestScore = 529.476
+BestScore = 529.359
+BestScore = 527.826
+BestScore = 525.423
+BestScore = 524.81
+BestScore = 524.629
+BestScore = 524.611
+Best Solution for problem: ../Benchmarks/ChristofidesEilon/vrpnc1.txt
+Route#1: 8 26 31 28 3 36 35 20 22 1 32
+Route#2: 6 14 25 24 43 7 23 48 27
+Route#3: 18 13 41 40 19 42 17 4 47
+Route#4: 11 2 29 21 16 50 34 30 9 38
+Route#5: 46 5 49 10 39 33 45 15 44 37 12
+cost 524.611
+BestScore = 583.787
+BestScore = 581.366
+BestScore = 581.054
+BestScore = 576.791
+BestScore = 575.498
+BestScore = 575.37
+BestScore = 574.89
+BestScore = 571.373
+BestScore = 570.508
+BestScore = 568.289
+BestScore = 567.278
+BestScore = 567.114
+BestScore = 565.893
+BestScore = 565.134
+BestScore = 564.503
+BestScore = 564.064
+BestScore = 563.87
+BestScore = 562.712
+BestScore = 562.319
+BestScore = 561.363
+BestScore = 559.128
+BestScore = 559.064
+BestScore = 556.339
+BestScore = 555.543
+BestScore = 551.991
+BestScore = 545.431
+BestScore = 539.829
+BestScore = 538.102
+BestScore = 537.032
+BestScore = 536.108
+BestScore = 535.906
+BestScore = 535.818
+BestScore = 535.409
+BestScore = 531.166
+BestScore = 530.677
+BestScore = 529.811
+BestScore = 529.519
+BestScore = 527.675
+BestScore = 525.72
+BestScore = 525.126
+BestScore = 524.81
+BestScore = 524.629
+BestScore = 524.611
+Best Solution for problem: ../Benchmarks/ChristofidesEilon/vrpnc1.txt
+Route#1: 32 1 22 20 35 36 3 28 31 26 8
+Route#2: 27 48 23 7 43 24 25 14 6
+Route#3: 47 4 17 42 19 40 41 13 18
+Route#4: 38 9 30 34 50 16 21 29 2 11
+Route#5: 46 5 49 10 39 33 45 15 44 37 12
+cost 524.611
+BestScore = 583.787
+BestScore = 582.561
+BestScore = 580.805
+BestScore = 579.992
+BestScore = 578.256
+BestScore = 577.765
+BestScore = 576.314
+BestScore = 574.94
+BestScore = 573.048
+BestScore = 572.336
+BestScore = 569.807
+BestScore = 568.641
+BestScore = 568.53
+BestScore = 567.573
+BestScore = 566.708
+BestScore = 566.497
+BestScore = 564.506
+BestScore = 563.333
+BestScore = 557.209
+BestScore = 556.755
+BestScore = 550.632
+BestScore = 550.515
+BestScore = 549.266
+BestScore = 547.732
+BestScore = 545.167
+BestScore = 544.186
+BestScore = 541.922
+BestScore = 541.018
+BestScore = 539.756
+BestScore = 537.754
+BestScore = 534.71
+BestScore = 533.346
+BestScore = 533.293
+BestScore = 532.68
+BestScore = 532.498
+BestScore = 532.481
+BestScore = 531.69
+BestScore = 531.14
+BestScore = 529.506
+BestScore = 529.33
+BestScore = 529.308
+BestScore = 527.697
+BestScore = 526.944
+BestScore = 525.423
+BestScore = 524.944
+BestScore = 524.81
+BestScore = 524.629
+BestScore = 524.611
+Best Solution for problem: ../Benchmarks/ChristofidesEilon/vrpnc1.txt
+Route#1: 32 1 22 20 35 36 3 28 31 26 8
+Route#2: 6 14 25 24 43 7 23 48 27
+Route#3: 18 13 41 40 19 42 17 4 47
+Route#4: 38 9 30 34 50 16 21 29 2 11
+Route#5: 12 37 44 15 45 33 39 10 49 5 46
+cost 524.611
+BestScore = 583.787
+BestScore = 581.366
+BestScore = 578.114
+BestScore = 572.038
+BestScore = 570.99
+BestScore = 568.243
+BestScore = 562.603
+BestScore = 558.344
+BestScore = 557.001
+BestScore = 555.704
+BestScore = 548.341
+BestScore = 546.844
+BestScore = 545.588
+BestScore = 545.001
+BestScore = 536.967
+BestScore = 535.455
+BestScore = 532.868
+BestScore = 532.255
+BestScore = 532.074
+BestScore = 532.056
+BestScore = 528.681
+BestScore = 526.743
+BestScore = 526.649
+Best Solution for problem: ../Benchmarks/ChristofidesEilon/vrpnc1.txt
+Route#1: 8 26 31 28 3 36 35 20 22 1 32
+Route#2: 27 48 23 7 43 24 25 14 6
+Route#3: 47 17 42 19 40 41 13 4 18
+Route#4: 38 9 30 34 50 21 29 2 16 11
+Route#5: 46 5 49 10 39 33 45 15 44 37 12
+cost 526.649
+BestScore = 583.787
+BestScore = 583.673
+BestScore = 581.093
+BestScore = 580.624
+BestScore = 578.347
+BestScore = 577.745
+BestScore = 577.495
+BestScore = 576.77
+BestScore = 576.375
+BestScore = 573.811
+BestScore = 570.861
+BestScore = 567.52
+BestScore = 553.357
+BestScore = 553.076
+BestScore = 549.723
+BestScore = 546.008
+BestScore = 544.592
+BestScore = 543.918
+BestScore = 542.797
+BestScore = 541.21
+BestScore = 538.349
+BestScore = 535.366
+BestScore = 534.779
+BestScore = 534.308
+BestScore = 534.182
+BestScore = 531.644
+BestScore = 531.135
+BestScore = 528.594
+BestScore = 526.966
+BestScore = 525.675
+BestScore = 525.126
+BestScore = 524.81
+BestScore = 524.611
+Best Solution for problem: ../Benchmarks/ChristofidesEilon/vrpnc1.txt
+Route#1: 8 26 31 28 3 36 35 20 22 1 32
+Route#2: 27 48 23 7 43 24 25 14 6
+Route#3: 47 4 17 42 19 40 41 13 18
+Route#4: 11 2 29 21 16 50 34 30 9 38
+Route#5: 46 5 49 10 39 33 45 15 44 37 12
+cost 524.611
+BestScore = 583.787
+BestScore = 581.418
+BestScore = 581.093
+BestScore = 580.964
+BestScore = 580.68
+BestScore = 579.815
+BestScore = 576.888
+BestScore = 576.173
+BestScore = 575.841
+BestScore = 572.756
+BestScore = 571.488
+BestScore = 570.987
+BestScore = 570.409
+BestScore = 570.397
+BestScore = 569.647
+BestScore = 567.469
+BestScore = 562.748
+BestScore = 557.478
+BestScore = 553.178
+BestScore = 548.994
+BestScore = 546.73
+BestScore = 545.002
+BestScore = 540.314
+BestScore = 537.456
+BestScore = 535.224
+BestScore = 534.846
+BestScore = 531.953
+BestScore = 530.435
+BestScore = 529.579
+BestScore = 527.257
+BestScore = 526.926
+BestScore = 525.675
+BestScore = 524.81
+BestScore = 524.611
+Best Solution for problem: ../Benchmarks/ChristofidesEilon/vrpnc1.txt
+Route#1: 8 26 31 28 3 36 35 20 22 1 32
+Route#2: 6 14 25 24 43 7 23 48 27
+Route#3: 47 4 17 42 19 40 41 13 18
+Route#4: 11 2 29 21 16 50 34 30 9 38
+Route#5: 46 5 49 10 39 33 45 15 44 37 12
+cost 524.611
+BestScore = 583.787
+BestScore = 581.758
+BestScore = 581.366
+BestScore = 580.14
+BestScore = 579.19
+BestScore = 577.856
+BestScore = 577.584
+BestScore = 576.426
+BestScore = 572.836
+BestScore = 572.755
+BestScore = 571.005
+BestScore = 570.895
+BestScore = 568.414
+BestScore = 564.84
+BestScore = 557.354
+BestScore = 555.188
+BestScore = 553.473
+BestScore = 546.847
+BestScore = 538.575
+BestScore = 536.943
+BestScore = 535.944
+BestScore = 533.059
+BestScore = 532.631
+BestScore = 532.269
+BestScore = 529.3
+BestScore = 529.189
+BestScore = 528.344
+BestScore = 527.792
+BestScore = 527.303
+BestScore = 525.126
+BestScore = 524.629
+BestScore = 524.611
+Best Solution for problem: ../Benchmarks/ChristofidesEilon/vrpnc1.txt
+Route#1: 8 26 31 28 3 36 35 20 22 1 32
+Route#2: 6 14 25 24 43 7 23 48 27
+Route#3: 18 13 41 40 19 42 17 4 47
+Route#4: 38 9 30 34 50 16 21 29 2 11
+Route#5: 12 37 44 15 45 33 39 10 49 5 46
+cost 524.611

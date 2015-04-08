@@ -1,0 +1,8 @@
+PARAMETER_FILE = param.txt
+PROBLEM_FILE = path.txt
+Successes/Runs = 1/0 
+Cost.min = 115, Cost.avg = 115.00, Cost.max = 115
+Gap.min = 0.0000%, Gap.avg = 0.0000%, Gap.max = 0.0000%
+Trials.min = 0, Trials.avg = 0.0, Trials.max = 0
+Time.min = 0.00 sec., Time.avg = 0.00 sec., Time.max = 0.00 sec.
+PokraŸujte stisknut¡m libovoln‚ kl vesy... 

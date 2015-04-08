@@ -1,0 +1,22 @@
+NAME : test.115.tour
+COMMENT : Length = 115
+COMMENT : Found by LKH [Keld Helsgaun] Wed Mar 18 13:27:37 2015
+TYPE : TOUR
+DIMENSION : 14
+TOUR_SECTION
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+-1
+EOF

@@ -1,0 +1,1168 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    
+    
+    <title>optaplanner/usa-n100000-k500.vrp at master · droolsjbpm/optaplanner · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="droolsjbpm/optaplanner" name="twitter:title" /><meta content="optaplanner - Java planning engine: OptaPlanner optimizes business resource scheduling and planning." name="twitter:description" /><meta content="https://avatars2.githubusercontent.com/u/517980?v=3&amp;s=400" name="twitter:image:src" />
+      <meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars2.githubusercontent.com/u/517980?v=3&amp;s=400" property="og:image" /><meta content="droolsjbpm/optaplanner" property="og:title" /><meta content="https://github.com/droolsjbpm/optaplanner" property="og:url" /><meta content="optaplanner - Java planning engine: OptaPlanner optimizes business resource scheduling and planning." property="og:description" />
+      <meta name="browser-stats-url" content="/_stats">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035">
+    
+    <meta name="pjax-timeout" content="1000">
+    
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+      <meta name="google-analytics" content="UA-3769691-2">
+
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="51191056:730E:5D13DC6:55055CBE" name="octolytics-dimension-request_id" />
+    
+    <meta content="Rails, view, blob#show" name="analytics-event" />
+
+    
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="GIrtKhYMv2EDwdSKzs853rSvYVSWPvRWDImbLS/dn2A30OqZyLBqMcwlgm+EX2frP9/WVAjsEFS8/0Ac+R4etg==" name="csrf-token" />
+
+    <link href="https://assets-cdn.github.com/assets/github-85e4ac99403eefa73664d9b122f27095fee8b7333e67f34fa34480ae497f7555.css" media="all" rel="stylesheet" />
+    <link href="https://assets-cdn.github.com/assets/github2-901780fdaaa6b0f56b2004899a7a24194bf4217cc7864291a9f68fa3a9264fdf.css" media="all" rel="stylesheet" />
+    
+    
+
+
+    <meta http-equiv="x-pjax-version" content="8060cc7a9543870628764b4fdb4264ea">
+
+      
+  <meta name="description" content="optaplanner - Java planning engine: OptaPlanner optimizes business resource scheduling and planning.">
+  <meta name="go-import" content="github.com/droolsjbpm/optaplanner git https://github.com/droolsjbpm/optaplanner.git">
+
+  <meta content="517980" name="octolytics-dimension-user_id" /><meta content="droolsjbpm" name="octolytics-dimension-user_login" /><meta content="1370858" name="octolytics-dimension-repository_id" /><meta content="droolsjbpm/optaplanner" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="1370858" name="octolytics-dimension-repository_network_root_id" /><meta content="droolsjbpm/optaplanner" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/droolsjbpm/optaplanner/commits/master.atom" rel="alternate" title="Recent Commits to optaplanner:master" type="application/atom+xml">
+
+  </head>
+
+
+  <body class="logged_out  env-production windows vis-public page-blob">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+
+
+        
+        <div class="header header-logged-out" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions" role="navigation">
+        <a class="button primary" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+      <a class="button" href="/login?return_to=%2Fdroolsjbpm%2Foptaplanner%2Fblob%2Fmaster%2Foptaplanner-examples%2Fdata%2Fvehiclerouting%2Fimport%2Fcapacitated%2Fusa-n100000-k500.vrp" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+    </div>
+
+    <div class="site-search repo-scope js-site-search" role="search">
+      <form accept-charset="UTF-8" action="/droolsjbpm/optaplanner/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/droolsjbpm/optaplanner/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <input type="text"
+    class="js-site-search-field is-clearable"
+    data-hotkey="s"
+    name="q"
+    placeholder="Search"
+    data-global-scope-placeholder="Search GitHub"
+    data-repo-scope-placeholder="Search"
+    tabindex="1"
+    autocapitalize="off">
+  <div class="scope-badge">This repository</div>
+</form>
+    </div>
+
+      <ul class="header-nav left" role="navigation">
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/explore" data-ga-click="(Logged out) Header, go to explore, text:explore">Explore</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/features" data-ga-click="(Logged out) Header, go to features, text:features">Features</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://enterprise.github.com/" data-ga-click="(Logged out) Header, go to enterprise, text:enterprise">Enterprise</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/blog" data-ga-click="(Logged out) Header, go to blog, text:blog">Blog</a>
+          </li>
+      </ul>
+
+  </div>
+</div>
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+<ul class="pagehead-actions">
+
+  <li>
+      <a href="/login?return_to=%2Fdroolsjbpm%2Foptaplanner"
+    class="minibutton with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <span class="octicon octicon-eye"></span>
+    Watch
+  </a>
+  <a class="social-count" href="/droolsjbpm/optaplanner/watchers">
+    76
+  </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fdroolsjbpm%2Foptaplanner"
+    class="minibutton with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <span class="octicon octicon-star"></span>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/droolsjbpm/optaplanner/stargazers">
+      234
+    </a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2Fdroolsjbpm%2Foptaplanner"
+        class="minibutton with-count tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-repo-forked"></span>
+        Fork
+      </a>
+      <a href="/droolsjbpm/optaplanner/network" class="social-count">
+        167
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="/droolsjbpm" class="url fn" itemprop="url" rel="author"><span itemprop="title">droolsjbpm</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="/droolsjbpm/optaplanner" class="js-current-repository" data-pjax="#js-repo-pjax-container">optaplanner</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline  ">
+        <div class="repository-sidebar clearfix">
+            
+<nav class="sunken-menu repo-nav js-repo-nav js-sidenav-container-pjax js-octicon-loaders"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container"
+     data-issue-count-url="/droolsjbpm/optaplanner/issues/counts">
+  <ul class="sunken-menu-group">
+    <li class="tooltipped tooltipped-w" aria-label="Code">
+      <a href="/droolsjbpm/optaplanner" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /droolsjbpm/optaplanner">
+        <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+</a>    </li>
+
+
+    <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+      <a href="/droolsjbpm/optaplanner/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g p" data-selected-links="repo_pulls /droolsjbpm/optaplanner/pulls">
+          <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+          <span class="js-pull-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+</a>    </li>
+
+
+  </ul>
+  <div class="sunken-menu-separator"></div>
+  <ul class="sunken-menu-group">
+
+    <li class="tooltipped tooltipped-w" aria-label="Pulse">
+      <a href="/droolsjbpm/optaplanner/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-selected-links="pulse /droolsjbpm/optaplanner/pulse">
+        <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+</a>    </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Graphs">
+      <a href="/droolsjbpm/optaplanner/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_graphs repo_contributors /droolsjbpm/optaplanner/graphs">
+        <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+</a>    </li>
+  </ul>
+
+
+</nav>
+
+              <div class="only-with-full-nav">
+                  
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><span class="text-emphasized">HTTPS</span> clone URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target"
+           value="https://github.com/droolsjbpm/optaplanner.git" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><span class="text-emphasized">Subversion</span> checkout URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target"
+           value="https://github.com/droolsjbpm/optaplanner" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+
+<p class="clone-options">You can clone with
+  <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a> or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</p>
+
+
+  <a href="https://windows.github.com" class="minibutton sidebar-button" title="Save droolsjbpm/optaplanner to your computer and use it in GitHub Desktop." aria-label="Save droolsjbpm/optaplanner to your computer and use it in GitHub Desktop.">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+                <a href="/droolsjbpm/optaplanner/archive/master.zip"
+                   class="minibutton sidebar-button"
+                   aria-label="Download the contents of droolsjbpm/optaplanner as a zip file"
+                   title="Download the contents of droolsjbpm/optaplanner as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+
+<a href="/droolsjbpm/optaplanner/blob/6fef9a86b1e43b0d2f52d4dc449aa0c1b47107b4/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+<!-- blob contrib key: blob_contributors:v21:5bf948d221c6dbb28f4ff854eaf9c7e1 -->
+
+<div class="file-navigation js-zeroclipboard-container">
+  
+<div class="select-menu js-menu-container js-select-menu left">
+  <span class="minibutton select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    title="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/5.2.0.M2.x/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="5.2.0.M2.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.2.0.M2.x">
+                5.2.0.M2.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/5.2.x/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="5.2.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.2.x">
+                5.2.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/5.3.x/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="5.3.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.3.x">
+                5.3.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/5.4.x/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="5.4.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.4.x">
+                5.4.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/5.5.x/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="5.5.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.5.x">
+                5.5.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/5.6.x/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="5.6.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="5.6.x">
+                5.6.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/6.0.0.Beta4.x/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="6.0.0.Beta4.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="6.0.0.Beta4.x">
+                6.0.0.Beta4.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/6.0.0.Beta5.x/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="6.0.0.Beta5.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="6.0.0.Beta5.x">
+                6.0.0.Beta5.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/6.0.0.GA.x/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="6.0.0.GA.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="6.0.0.GA.x">
+                6.0.0.GA.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/6.0.x/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="6.0.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="6.0.x">
+                6.0.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/6.1.x/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="6.1.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="6.1.x">
+                6.1.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/6.2.x/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="6.2.x"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="6.2.x">
+                6.2.x
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/kie_refactory/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="kie_refactory"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="kie_refactory">
+                kie_refactory
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/droolsjbpm/optaplanner/blob/master/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="master">
+                master
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/r6.0.0.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="r6.0.0.Final"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="r6.0.0.Final">
+                r6.0.0.Final
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/r6.0.1.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="r6.0.1.Final"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="r6.0.1.Final">
+                r6.0.1.Final
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/droolsjbpm/optaplanner/blob/reteoo_cleanup/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+               data-name="reteoo_cleanup"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="reteoo_cleanup">
+                reteoo_cleanup
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/b4_uf_0.5.x/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="b4_uf_0.5.x"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="b4_uf_0.5.x">b4_uf_0.5.x</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.2.0.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.2.0.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.2.0.Final">6.2.0.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.2.0.CR4/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.2.0.CR4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.2.0.CR4">6.2.0.CR4</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.2.0.CR3/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.2.0.CR3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.2.0.CR3">6.2.0.CR3</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.2.0.CR2/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.2.0.CR2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.2.0.CR2">6.2.0.CR2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.2.0.CR1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.2.0.CR1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.2.0.CR1">6.2.0.CR1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.2.0.Beta3/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.2.0.Beta3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.2.0.Beta3">6.2.0.Beta3</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.2.0.Beta2/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.2.0.Beta2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.2.0.Beta2">6.2.0.Beta2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.2.0.Beta1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.2.0.Beta1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.2.0.Beta1">6.2.0.Beta1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.1.0.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.1.0.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.1.0.Final">6.1.0.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.1.0.CR2/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.1.0.CR2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.1.0.CR2">6.1.0.CR2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.1.0.CR1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.1.0.CR1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.1.0.CR1">6.1.0.CR1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.1.0.Beta4/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.1.0.Beta4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.1.0.Beta4">6.1.0.Beta4</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.1.0.Beta3/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.1.0.Beta3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.1.0.Beta3">6.1.0.Beta3</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.1.0.Beta2/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.1.0.Beta2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.1.0.Beta2">6.1.0.Beta2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.1.0.Beta1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.1.0.Beta1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.1.0.Beta1">6.1.0.Beta1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.1.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.1.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.1.Final">6.0.1.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.Final">6.0.0.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.CR5/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.CR5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.CR5">6.0.0.CR5</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.CR4-Pre1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.CR4-Pre1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.CR4-Pre1">6.0.0.CR4-Pre1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.CR4/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.CR4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.CR4">6.0.0.CR4</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.CR3/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.CR3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.CR3">6.0.0.CR3</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.CR2/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.CR2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.CR2">6.0.0.CR2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.CR1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.CR1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.CR1">6.0.0.CR1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.Beta5/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.Beta5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.Beta5">6.0.0.Beta5</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.Beta4/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.Beta4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.Beta4">6.0.0.Beta4</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.Beta3/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.Beta3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.Beta3">6.0.0.Beta3</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.Beta2/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.Beta2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.Beta2">6.0.0.Beta2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.Beta1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.Beta1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.Beta1">6.0.0.Beta1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.Alpha9/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.Alpha9"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.Alpha9">6.0.0.Alpha9</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.Alpha8/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.Alpha8"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.Alpha8">6.0.0.Alpha8</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.Alpha7/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.Alpha7"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.Alpha7">6.0.0.Alpha7</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.Alpha4/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.Alpha4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.Alpha4">6.0.0.Alpha4</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.Alpha3/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.Alpha3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.Alpha3">6.0.0.Alpha3</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/6.0.0.Alpha1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="6.0.0.Alpha1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="6.0.0.Alpha1">6.0.0.Alpha1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.6.0.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.6.0.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.6.0.Final">5.6.0.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.6.0.CR1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.6.0.CR1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.6.0.CR1">5.6.0.CR1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.5.0.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.5.0.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.5.0.Final">5.5.0.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.5.0.CR1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.5.0.CR1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.5.0.CR1">5.5.0.CR1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.5.0.Beta1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.5.0.Beta1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.5.0.Beta1">5.5.0.Beta1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.4.0.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.4.0.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.4.0.Final">5.4.0.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.4.0.CR1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.4.0.CR1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.4.0.CR1">5.4.0.CR1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.4.0.Beta2/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.4.0.Beta2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.4.0.Beta2">5.4.0.Beta2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.4.0.Beta1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.4.0.Beta1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.4.0.Beta1">5.4.0.Beta1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.3.5.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.3.5.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.3.5.Final">5.3.5.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.3.4.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.3.4.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.3.4.Final">5.3.4.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.3.3.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.3.3.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.3.3.Final">5.3.3.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.3.2.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.3.2.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.3.2.Final">5.3.2.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.3.1.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.3.1.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.3.1.Final">5.3.1.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.3.0.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.3.0.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.3.0.Final">5.3.0.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.3.0.CR1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.3.0.CR1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.3.0.CR1">5.3.0.CR1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.3.0.Beta1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.3.0.Beta1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.3.0.Beta1">5.3.0.Beta1</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.2.1.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.2.1.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.2.1.Final">5.2.1.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.2.0.M2/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.2.0.M2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.2.0.M2">5.2.0.M2</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.2.0.Final/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.2.0.Final"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.2.0.Final">5.2.0.Final</a>
+            </div>
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/droolsjbpm/optaplanner/tree/5.2.0.CR1/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp"
+                 data-name="5.2.0.CR1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="5.2.0.CR1">5.2.0.CR1</a>
+            </div>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div class="button-group right">
+    <a href="/droolsjbpm/optaplanner/find/master"
+          class="js-show-file-finder minibutton empty-icon tooltipped tooltipped-s"
+          data-pjax
+          data-hotkey="t"
+          aria-label="Quickly jump between files">
+      <span class="octicon octicon-list-unordered"></span>
+    </a>
+    <button aria-label="Copy file path to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+  </div>
+
+  <div class="breadcrumb js-zeroclipboard-target">
+    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/droolsjbpm/optaplanner" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">optaplanner</span></a></span></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/droolsjbpm/optaplanner/tree/master/optaplanner-examples" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">optaplanner-examples</span></a></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/droolsjbpm/optaplanner/tree/master/optaplanner-examples/data" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">data</span></a></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/droolsjbpm/optaplanner/tree/master/optaplanner-examples/data/vehiclerouting" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">vehiclerouting</span></a></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/droolsjbpm/optaplanner/tree/master/optaplanner-examples/data/vehiclerouting/import" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">import</span></a></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/droolsjbpm/optaplanner/tree/master/optaplanner-examples/data/vehiclerouting/import/capacitated" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">capacitated</span></a></span><span class="separator">/</span><strong class="final-path">usa-n100000-k500.vrp</strong>
+  </div>
+</div>
+
+<include-fragment class="commit commit-loader file-history-tease" src="/droolsjbpm/optaplanner/contributors/master/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp">
+  <div class="file-history-tease-header">
+    Fetching contributors&hellip;
+  </div>
+
+  <div class="participation">
+    <p class="loader-loading"><img alt="" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-EAF2F5-0bdc57d34b85c4a4de9d0d1db10cd70e8a95f33ff4f46c5a8c48b4bf4e5a9abe.gif" width="16" /></p>
+    <p class="loader-error">Cannot retrieve contributors at this time</p>
+  </div>
+</include-fragment>
+<div class="file">
+  <div class="file-header">
+    <div class="file-actions">
+      <div class="button-group">
+        <a href="/droolsjbpm/optaplanner/raw/master/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp" class="minibutton " id="raw-url">Raw</a>
+        <a href="/droolsjbpm/optaplanner/commits/master/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp" class="minibutton " rel="nofollow">History</a>
+      </div><!-- /.button-group -->
+
+        <a class="octicon-button tooltipped tooltipped-nw"
+           href="https://windows.github.com" aria-label="Open this file in GitHub for Windows">
+            <span class="octicon octicon-device-desktop"></span>
+        </a>
+
+
+        <a class="octicon-button danger disabled tooltipped tooltipped-w" href="#"
+           aria-label="You must be signed in to make or propose changes">
+      </a>
+    </div><!-- /.actions -->
+    <div class="file-info">
+      3696.642 kb
+    </div>
+  </div>
+      <div class="render-notice">
+      This file has been truncated, but you can <a href="/droolsjbpm/optaplanner/blob/master/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp?raw=true">view the full file</a>.
+    </div>
+
+  <div class="blob-wrapper data type-text">
+      <div class="image">
+          <a href="/droolsjbpm/optaplanner/blob/master/optaplanner-examples/data/vehiclerouting/import/capacitated/usa-n100000-k500.vrp?raw=true">View Raw</a>
+            <p>(Sorry about that, but we can't show files that are this big right now.)</p>
+      </div>
+  </div>
+
+</div>
+
+<a href="#jump-to-line" rel="facebox[.linejump]" data-hotkey="l" style="display:none">Jump to Line</a>
+<div id="jump-to-line" style="display:none">
+  <form accept-charset="UTF-8" class="js-jump-to-line-form">
+    <input class="linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" autofocus>
+    <button type="submit" class="button">Go</button>
+  </form>
+</div>
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2015 <span title="0.04110s from github-fe127-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-suggester-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder=""></textarea>
+      <div class="suggester-container">
+        <div class="suggester fullscreen-suggester js-suggester js-navigation-container"></div>
+      </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    
+    
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-x flash-close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-70c417717c6c19f325c76c40de062c2e005f8cfec564283d7818b5b0fe8c0d27.js"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-9adb85255293205044bdded05300662b60a3fe712cb26ee7e5ca313a9f2ce3f7.js"></script>
+      
+      
+
+  </body>
+</html>
+

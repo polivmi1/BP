@@ -1,0 +1,300 @@
+\ifglsentryexists{CVUT}{}%
+{%
+\gls@defglossaryentry{CVUT}%
+{%
+name={{\v C}VUT},%
+sort={{\v C}VUT},%
+type={acronym},%
+first={{\v C}esk{\' e} vysok{\' e} u{\v c}en{\' i} technick{\' e} v Praze\glsspace ({\v C}VUT)},%
+firstplural={{\v C}esk{\' e} vysok{\' e} u{\v c}en{\' i} technick{\' e} v Praze\acrpluralsuffix \glsspace ({\v C}VUT\acrpluralsuffix )},%
+text={{\v C}VUT},%
+plural={{\v C}VUT\acrpluralsuffix },%
+description={{\v C}esk{\' e} vysok{\' e} u{\v c}en{\' i} technick{\' e} v Praze},%
+descriptionplural={{\v C}esk{\' e} vysok{\' e} u{\v c}en{\' i} technick{\' e} v Praze\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={{\v C}esk{\' e} vysok{\' e} u{\v c}en{\' i} technick{\' e} v Praze},%
+longplural={{\v C}esk{\' e} vysok{\' e} u{\v c}en{\' i} technick{\' e} v Prazes},%
+short={{\v C}VUT},%
+shortplural={{\v C}VUTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{FIT}{}%
+{%
+\gls@defglossaryentry{FIT}%
+{%
+name={FIT},%
+sort={FIT},%
+type={acronym},%
+first={Fakulta informa{\v c}n{\' i}ch technologi{\' i}\glsspace (FIT)},%
+firstplural={Fakulta informa{\v c}n{\' i}ch technologi{\' i}\acrpluralsuffix \glsspace (FIT\acrpluralsuffix )},%
+text={FIT},%
+plural={FIT\acrpluralsuffix },%
+description={Fakulta informa{\v c}n{\' i}ch technologi{\' i}},%
+descriptionplural={Fakulta informa{\v c}n{\' i}ch technologi{\' i}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Fakulta informa{\v c}n{\' i}ch technologi{\' i}},%
+longplural={Fakulta informa{\v c}n{\' i}ch technologi{\' i}s},%
+short={FIT},%
+shortplural={FITs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{VRP}{}%
+{%
+\gls@defglossaryentry{VRP}%
+{%
+name={VRP},%
+sort={VRP},%
+type={acronym},%
+first={Vehicle routing problem\glsspace (VRP)},%
+firstplural={Vehicle routing problem\acrpluralsuffix \glsspace (VRP\acrpluralsuffix )},%
+text={VRP},%
+plural={VRP\acrpluralsuffix },%
+description={Vehicle routing problem},%
+descriptionplural={Vehicle routing problem\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Vehicle routing problem},%
+longplural={Vehicle routing problems},%
+short={VRP},%
+shortplural={VRPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{CVRP}{}%
+{%
+\gls@defglossaryentry{CVRP}%
+{%
+name={CVRP},%
+sort={CVRP},%
+type={acronym},%
+first={Capacitated vehicle routing problem\glsspace (CVRP)},%
+firstplural={Capacitated vehicle routing problem\acrpluralsuffix \glsspace (CVRP\acrpluralsuffix )},%
+text={CVRP},%
+plural={CVRP\acrpluralsuffix },%
+description={Capacitated vehicle routing problem},%
+descriptionplural={Capacitated vehicle routing problem\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Capacitated vehicle routing problem},%
+longplural={Capacitated vehicle routing problems},%
+short={CVRP},%
+shortplural={CVRPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{VRPTW}{}%
+{%
+\gls@defglossaryentry{VRPTW}%
+{%
+name={VRPTW},%
+sort={VRPTW},%
+type={acronym},%
+first={Vehicle routing problem with time windows\glsspace (VRPTW)},%
+firstplural={Vehicle routing problem with time windows\acrpluralsuffix \glsspace (VRPTW\acrpluralsuffix )},%
+text={VRPTW},%
+plural={VRPTW\acrpluralsuffix },%
+description={Vehicle routing problem with time windows},%
+descriptionplural={Vehicle routing problem with time windows\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Vehicle routing problem with time windows},%
+longplural={Vehicle routing problem with time windowss},%
+short={VRPTW},%
+shortplural={VRPTWs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{CCVRP}{}%
+{%
+\gls@defglossaryentry{CCVRP}%
+{%
+name={CCVRP},%
+sort={CCVRP},%
+type={acronym},%
+first={Cummulative capacitated vehicle routing problem\glsspace (CCVRP)},%
+firstplural={Cummulative capacitated vehicle routing problem\acrpluralsuffix \glsspace (CCVRP\acrpluralsuffix )},%
+text={CCVRP},%
+plural={CCVRP\acrpluralsuffix },%
+description={Cummulative capacitated vehicle routing problem},%
+descriptionplural={Cummulative capacitated vehicle routing problem\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Cummulative capacitated vehicle routing problem},%
+longplural={Cummulative capacitated vehicle routing problems},%
+short={CCVRP},%
+shortplural={CCVRPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{LAHC}{}%
+{%
+\gls@defglossaryentry{LAHC}%
+{%
+name={LAHC},%
+sort={LAHC},%
+type={acronym},%
+first={Late Acceptance Hill-Climbing algorithm\glsspace (LAHC)},%
+firstplural={Late Acceptance Hill-Climbing algorithm\acrpluralsuffix \glsspace (LAHC\acrpluralsuffix )},%
+text={LAHC},%
+plural={LAHC\acrpluralsuffix },%
+description={Late Acceptance Hill-Climbing algorithm},%
+descriptionplural={Late Acceptance Hill-Climbing algorithm\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Late Acceptance Hill-Climbing algorithm},%
+longplural={Late Acceptance Hill-Climbing algorithms},%
+short={LAHC},%
+shortplural={LAHCs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{SCHC}{}%
+{%
+\gls@defglossaryentry{SCHC}%
+{%
+name={SCHC},%
+sort={SCHC},%
+type={acronym},%
+first={Step Counting Hill-Climbing algorithm\glsspace (SCHC)},%
+firstplural={Step Counting Hill-Climbing algorithm\acrpluralsuffix \glsspace (SCHC\acrpluralsuffix )},%
+text={SCHC},%
+plural={SCHC\acrpluralsuffix },%
+description={Step Counting Hill-Climbing algorithm},%
+descriptionplural={Step Counting Hill-Climbing algorithm\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Step Counting Hill-Climbing algorithm},%
+longplural={Step Counting Hill-Climbing algorithms},%
+short={SCHC},%
+shortplural={SCHCs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{SA}{}%
+{%
+\gls@defglossaryentry{SA}%
+{%
+name={SA},%
+sort={SA},%
+type={acronym},%
+first={Simulated Annealing\glsspace (SA)},%
+firstplural={Simulated Annealing\acrpluralsuffix \glsspace (SA\acrpluralsuffix )},%
+text={SA},%
+plural={SA\acrpluralsuffix },%
+description={Simulated Annealing},%
+descriptionplural={Simulated Annealing\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Simulated Annealing},%
+longplural={Simulated Annealings},%
+short={SA},%
+shortplural={SAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{TS}{}%
+{%
+\gls@defglossaryentry{TS}%
+{%
+name={TS},%
+sort={TS},%
+type={acronym},%
+first={Tabu Search\glsspace (TS)},%
+firstplural={Tabu Search\acrpluralsuffix \glsspace (TS\acrpluralsuffix )},%
+text={TS},%
+plural={TS\acrpluralsuffix },%
+description={Tabu Search},%
+descriptionplural={Tabu Search\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Tabu Search},%
+longplural={Tabu Searchs},%
+short={TS},%
+shortplural={TSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
